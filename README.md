@@ -1,6 +1,6 @@
 # IAT359
 
-Steps is a step track app I created for IAT359.
+Steps is a step tracker app I created for IAT359.
 
 In oder to use the map feature, u need to create you own google maps api from https://developers.google.com/maps/documentation/.
 
