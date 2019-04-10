@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RunActivity">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Top part: google map -->
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></fragment>
+
+        <!-- Bottom part -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <!-- All TextView info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_data_run"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <!-- Time -->
+                <!-- this icon is download from https://www.flaticon.com/free-icon/alarm-clock_149315#term=time&page=1&position=14
+                     and it was created by Smashicons-->
+                <TextView
+                    android:id="@+id/duration_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableBottom="@drawable/ic_duration"
+                    android:drawableTint="#FFFFFF"
+                    android:gravity="center"
+                    android:text="0:00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Distance -->
+                <!-- this icon is download from https://www.flaticon.com/free-icon/timer_942186#term=speed&page=1&position=10
+                     and it was created by Freepik-->
+                <TextView
+                    android:id="@+id/distance_for_run_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableBottom="@drawable/ic_distance"
+                    android:drawableTint="#FFFFFF"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Calories -->
+                <!-- this icon is download from https://www.flaticon.com/free-icon/calories_1690429#term=calories&page=1&position=8
+                     and it was created by Freepik-->
+                <TextView
+                    android:id="@+id/calories_forRun_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableBottom="@drawable/ic_cal"
+                    android:drawableTint="#FFFFFF"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- navigation bar -->
+            <android.support.design.widget.BottomNavigationView
+                android:id="@+id/navigation_menu_for_run"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/colorPrimary"
+                app:itemBackground="@color/colorPrimary"
+                app:itemIconTint="#000000"
+                app:itemTextColor="#000000"
+                app:menu="@menu/navigation_menu"></android.support.design.widget.BottomNavigationView>
+        </LinearLayout>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <!-- refresh floating button -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/refreshButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="390dp"
+        android:src="@drawable/ic_action_refresh"
+        app:backgroundTint="#FFFFFF"
+        app:fabSize="auto"
+        app:rippleColor="#000000" />
+
+    <!-- start floating button -->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/runButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="460dp"
+        android:src="@drawable/ic_button_run"
+        app:backgroundTint="#F44336"
+        app:fabSize="auto"
+        app:rippleColor="#9C27B0" />
+
+</android.support.design.widget.CoordinatorLayout>

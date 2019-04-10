@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Today action button -->
+    <item
+        android:id="@+id/action_today"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_today"
+        android:title="Today"></item>
+
+    <!-- Run action button -->
+    <item
+        android:id="@+id/action_run"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_run"
+        android:title="Run"></item>
+
+    <!-- Rank action button -->
+    <item
+        android:id="@+id/action_rank"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_rank"
+        android:title="Rank"></item>
+
+    <!-- Me action button -->
+    <item
+        android:id="@+id/action_me"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_me"
+        android:title="Me"></item>
+</menu>

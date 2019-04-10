@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TodayActivity">
+
+    <!-- Toolbar -->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/today_toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/toolbar_calendar_background"
+        android:backgroundTint="#DDCAF0"
+        android:backgroundTintMode="multiply"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:titleTextColor="@android:color/black">
+
+        <android.support.v7.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Horizontal calendar -->
+            <!-- this view is made by Horizontal-Calendar library -->
+            <!-- learned it from https://github.com/Mulham-Raee/Horizontal-Calendar -->
+            <devs.mulham.horizontalcalendar.HorizontalCalendarView
+                android:id="@+id/horizontalCalendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                app:textColorNormal="@android:color/white"
+                app:textColorSelected="#000000"></devs.mulham.horizontalcalendar.HorizontalCalendarView>
+
+            <!-- current date
+                 in string format -->
+            <TextView
+                android:id="@+id/toolbarData_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="19dp"
+                android:textStyle="bold" />
+        </android.support.v7.widget.LinearLayoutCompat>
+
+    </android.support.v7.widget.Toolbar>
+
+    <!-- circular-music-progressbar -->
+    <!-- this view is made by circular-music-progressbar library -->
+    <!-- learned it from https://github.com/aliab/circular-music-progressbar -->
+    <info.abdolahi.CircularMusicProgressBar
+        android:id="@+id/circular_progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        android:src="@drawable/progressbar_background"
+        app:border_color="#A3E7E6"
+        app:border_width="5dp"
+        app:centercircle_diammterer="0.95"
+        app:draw_anticlockwise="false"
+        app:progress_color="#00796B"
+        app:progress_startAngle="-90">
+
+    </info.abdolahi.CircularMusicProgressBar>
+
+    <!-- Move Min -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="45dp">
+
+        <TextView
+            android:id="@+id/today_moveMinute_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#00796B"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Move Min"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <!-- Three data view -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingLeft="110dp"
+        android:paddingTop="20dp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="20dp">
+
+            <!-- steps value -->
+            <TextView
+                android:id="@+id/steps_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <!-- steps -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="steps"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <!-- Vertical divider -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:background="#c0c0c0" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp">
+
+            <!-- calories -->
+            <TextView
+                android:id="@+id/calories_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <!-- Cal -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Cal"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+        <!-- Vertical divider -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="35dp"
+            android:background="#c0c0c0" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp">
+
+            <!-- Walking Distance -->
+            <TextView
+                android:id="@+id/miles_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+
+            <!-- mi -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="mi"
+                android:textColor="#000000" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- navigation bar -->
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation_menu_for_today"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="#000000"
+        app:itemTextColor="#000000"
+        app:menu="@menu/navigation_menu">
+
+
+    </android.support.design.widget.BottomNavigationView>
+
+</android.support.v7.widget.LinearLayoutCompat>
